@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import {useCartContext} from "../context/CartContext"
 export default function Card({item}) {
+  const {addItem} = useCartContext();
   return (
     <article className="mb-2 col-12 col-md-6 col-xl-3">
       <div className="card">
@@ -25,6 +27,7 @@ export default function Card({item}) {
             <Link
               to="/cart"
               className="btn btn-outline-primary"
+              onClick={() => addItem(item)}
             >
               Comprar
             </Link>
