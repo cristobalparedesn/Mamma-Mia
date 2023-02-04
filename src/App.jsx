@@ -28,7 +28,10 @@ export default function App() {
             path="/cart"
             element={<Cart />}
           />
-          {/* Agregar ruta 404 */}
+          <Route
+            path="*"
+            element={<h1>Not Found</h1>}
+          />
         </Routes>
       </main>
     </div>
